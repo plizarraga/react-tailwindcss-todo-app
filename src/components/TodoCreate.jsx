@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const TodoCreate = ({ createTodo }) => {
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState('');
 
   const handleCreateTodo = (e) => {
     e.preventDefault();
 
     if (!title.trim()) {
-      setTitle("");
+      setTitle('');
       return;
     }
 
     createTodo(title.trim());
-    setTitle("");
+    setTitle('');
   };
   return (
     <form

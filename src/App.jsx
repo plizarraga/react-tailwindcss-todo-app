@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 import {
   Footer,
   Header,
@@ -6,27 +6,27 @@ import {
   TodoCreate,
   TodoFilter,
   TodoList,
-} from "./components";
+} from './components';
 const initialState = [
   {
     id: 1,
-    title: "Learn React",
+    title: 'Learn React',
     completed: false,
   },
   {
     id: 2,
-    title: "Learn Redux",
+    title: 'Learn Redux',
     completed: true,
   },
   {
     id: 3,
-    title: "Learn Node",
+    title: 'Learn Node',
     completed: false,
   },
 ];
 const App = () => {
   const [todos, setTodos] = useState(initialState);
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState('all');
 
   const createTodo = (title) => {
     const newTodo = {
@@ -63,11 +63,11 @@ const App = () => {
 
   const filteredTodos = () => {
     switch (filter) {
-      case "all":
+      case 'all':
         return todos;
-      case "active":
+      case 'active':
         return todos.filter((todo) => !todo.completed);
-      case "completed":
+      case 'completed':
         return todos.filter((todo) => todo.completed);
       default:
         return todos;
@@ -75,7 +75,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-300 bg-[url('./assets/images/bg-mobile-light.jpg')] bg-contain bg-no-repeat">
+    <div className="min-h-screen bg-gray-300 bg-[url('./assets/images/bg-mobile-light.jpg')] bg-contain bg-no-repeat dark:bg-slate-800 dark:bg-[url('./assets/images/bg-mobile-dark.jpg')]">
       <Header />
       <main className="container mx-auto px-6">
         <TodoCreate createTodo={createTodo} />
