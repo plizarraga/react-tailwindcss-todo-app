@@ -1,5 +1,5 @@
 import React from "react";
-import { MoonIcon } from "./icons";
+import { IconMoon } from "./icons";
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
           Todo
         </h1>
         <button type="button" className="">
-          <MoonIcon className="fill-yellow-200" />
+          <IconMoon className="fill-yellow-200" />
         </button>
       </div>
     </header>

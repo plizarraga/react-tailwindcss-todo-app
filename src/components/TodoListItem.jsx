@@ -1,5 +1,5 @@
 import React from "react";
-import { CrossIcon } from "./icons";
+import { IconCross } from "./icons";
 
 const TodoListItem = ({ todo }) => {
   const { id, title, completed } = todo;
@@ -11,13 +11,13 @@ const TodoListItem = ({ todo }) => {
       ></button>
       <p
         className={
-          "grow text-gray-600 " + `${completed && "text-gray-300 line-through"}`
+          "grow text-gray-600 " + `${completed && "text-gray-200 line-through"}`
         }
       >
         {title}
       </p>
       <button>
-        <CrossIcon />
+        <IconCross />
       </button>
     </article>
   );
