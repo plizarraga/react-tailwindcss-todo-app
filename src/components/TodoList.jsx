@@ -3,7 +3,7 @@ import TodoListItem from './TodoListItem';
 
 const TodoList = ({ todos, toggleTodo, deleteTodo }) => {
   return (
-    <div className="mt4 mt-4 rounded-t-md bg-white">
+    <div className="mt-4 rounded-t-md bg-white dark:bg-slate-800">
       {todos.map((todo) => (
         <TodoListItem
           key={todo.id}
