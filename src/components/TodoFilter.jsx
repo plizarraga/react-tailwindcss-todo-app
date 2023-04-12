@@ -1,7 +1,6 @@
 import React from "react";
 
 const TodoFilter = ({ filter, updateFilter }) => {
-  console.log(filter);
   return (
     <section className="container mx-auto mt-4">
       <div className="flex justify-center gap-5 rounded-md bg-white p-4">
