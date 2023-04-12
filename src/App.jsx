@@ -37,12 +37,31 @@ const App = () => {
     setTodos([...todos, newTodo]);
   };
 
+  const toggleTodo = (id) => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        todo.completed = !todo.completed;
+      }
+      return todo;
+    });
+    setTodos(newTodos);
+  };
+
+  const deleteTodo = (id) => {
+    const newTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodos);
+  };
+
   return (
     <div className="min-h-screen bg-gray-300 bg-[url('./assets/images/bg-mobile-light.jpg')] bg-contain bg-no-repeat">
       <Header />
       <main className="container mx-auto px-6">
         <TodoCreate createTodo={createTodo} />
-        <TodoList todos={todos} />
+        <TodoList
+          todos={todos}
+          toggleTodo={toggleTodo}
+          deleteTodo={deleteTodo}
+        />
         <TodoComputed />
         <TodoFilter />
       </main>

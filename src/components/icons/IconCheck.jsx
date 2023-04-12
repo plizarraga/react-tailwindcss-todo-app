@@ -1,9 +1,10 @@
 import React from "react";
 
-const IconCheck = () => {
+const IconCheck = ({ ...props }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
       <path
+        {...props}
         fill="none"
         stroke="#FFF"
         strokeWidth="2"
