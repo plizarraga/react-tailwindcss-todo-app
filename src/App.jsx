@@ -74,13 +74,17 @@ const App = () => {
           toggleTodo={toggleTodo}
           deleteTodo={deleteTodo}
         />
-        <TodoComputed
-          itemsLeft={itemsLeft}
-          clearCompletedTodos={clearCompletedTodos}
-        />
-        <TodoFilter filter={filter} updateFilter={updateFilter} />
+        {itemsLeft > 0 && (
+          <TodoComputed
+            itemsLeft={itemsLeft}
+            clearCompletedTodos={clearCompletedTodos}
+          />
+        )}
+        {itemsLeft > 0 && (
+          <TodoFilter filter={filter} updateFilter={updateFilter} />
+        )}
       </main>
-      <Footer />
+      {itemsLeft > 0 && <Footer />}
     </div>
   );
 };
