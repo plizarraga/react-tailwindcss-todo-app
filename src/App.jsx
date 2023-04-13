@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Footer,
   Header,
@@ -7,26 +7,16 @@ import {
   TodoFilter,
   TodoList,
 } from './components';
-const initialState = [
-  {
-    id: 1,
-    title: 'Learn React',
-    completed: false,
-  },
-  {
-    id: 2,
-    title: 'Learn Redux',
-    completed: true,
-  },
-  {
-    id: 3,
-    title: 'Learn Node',
-    completed: false,
-  },
-];
+
+const initialStateTodos = JSON.parse(localStorage.getItem('todos')) || [];
+
 const App = () => {
-  const [todos, setTodos] = useState(initialState);
+  const [todos, setTodos] = useState(initialStateTodos);
   const [filter, setFilter] = useState('all');
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   const createTodo = (title) => {
     const newTodo = {
