@@ -84,7 +84,7 @@ const App = () => {
           <TodoFilter filter={filter} updateFilter={updateFilter} />
         )}
       </main>
-      {itemsLeft > 0 && <Footer />}
+      {itemsLeft > 1 && <Footer />}
     </div>
   );
 };
