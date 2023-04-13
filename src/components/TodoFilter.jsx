@@ -10,7 +10,7 @@ const TodoFilter = ({ filter, updateFilter }) => {
           className={`font-semibold ${
             filter === 'all'
               ? 'text-blue-500 transition-all duration-700 hover:text-gray-400 dark:hover:text-slate-500'
-              : 'text-gray-400 transition-all duration-700 hover:text-blue-500 dark:text-slate-500'
+              : 'text-gray-400 transition-all duration-700 hover:text-blue-500 dark:text-slate-500 dark:hover:text-blue-500'
           }`}
         >
           All
@@ -21,7 +21,7 @@ const TodoFilter = ({ filter, updateFilter }) => {
           className={`font-semibold ${
             filter === 'active'
               ? 'text-blue-500 transition-all duration-700 hover:text-gray-400 dark:hover:text-slate-500'
-              : 'text-gray-400 transition-all duration-700 hover:text-blue-500 dark:text-slate-500'
+              : 'text-gray-400 transition-all duration-700 hover:text-blue-500 dark:text-slate-500 dark:hover:text-blue-500'
           }`}
         >
           Active
@@ -32,7 +32,7 @@ const TodoFilter = ({ filter, updateFilter }) => {
           className={`font-semibold ${
             filter == 'completed'
               ? 'text-blue-500 transition-all duration-700 hover:text-gray-400 dark:hover:text-slate-500'
-              : 'text-gray-400 transition-all duration-700 hover:text-blue-500 dark:text-slate-500'
+              : 'text-gray-400 transition-all duration-700 hover:text-blue-500 dark:text-slate-500 dark:hover:text-blue-500'
           }`}
         >
           Completed
